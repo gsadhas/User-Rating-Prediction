@@ -1,0 +1,45 @@
+SVM and RF algorithms
+---------------------
+
+1. Place .csv file in “data” folder
+2. Navigate to SVM and RF folder in terminal
+3. main.py is the file that runs the code
+4. Run the source code using below command from the terminal
+
+	python main.py
+
+NOTE: To run individual models, comment and uncomment respective models and features. 
+Please use one “combined_features” and “rf”
+
+#Baseline model 1
+combined_features = FeatureUnion([("tfidf", vectorizer)])
+
+#Baseline model 2
+combined_features = FeatureUnion([("sentiment", senti)])
+
+#Baseline model 3
+combined_features = FeatureUnion([("LDA", lda)])
+
+# Combined model
+combined_features = FeatureUnion([("tfidf", vectorizer), ("sentiment", senti), ("LDA", lda)])
+
+# SVM
+rf = svm.SVC(class_weight="balanced", kernel="linear", gamma="auto")
+
+# Random Forest
+rf = RandomForestClassifier(n_estimators=100, n_jobs=2)
+
+
+
+Convolution algorithms
+----------------------
+1. We extracted the features from sample dataset and convered into numpy array.
+2. Features dump are in data folder.
+3. To run the code, navigate NNcode folder in terminal
+4. Run below files for respective algorithms using below command
+
+	For CNN model 1,
+					python convnet1.py
+
+	For CNN model 2,
+					python convent2.py
