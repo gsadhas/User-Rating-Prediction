@@ -33,7 +33,7 @@ rf = RandomForestClassifier(n_estimators=100, n_jobs=2)
 
 Convolution algorithms
 ----------------------
-1. We extracted the features from sample dataset and convered into numpy array.
+1. Features were extracted from sample dataset and convered into numpy array.
 2. Features dump are in data folder.
 3. To run the code, navigate NNcode folder in terminal
 4. Run below files for respective algorithms using below command
